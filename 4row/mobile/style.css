@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: green;
+}
+
+input{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.container{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+}
+
+.border{
+    margin-top: 10%;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px 20px;
+}
+
+#chip{
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.button{
+    width: 50%;
+    padding: 5px;
+}

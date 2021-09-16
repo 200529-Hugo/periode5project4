@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: green;
+}
+
+.container{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+}
+
+.border{
+    width: 50%;
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color: white;
+    padding: 10px 20px;
+    margin-top: 5%;
+}
+
+.nameVsName{
+    width: 100%;
+    margin: 0 auto;
+}
+
+#nameOne{
+    text-align: right;
+    float: left;
+    width: 50%;
+}
+
+.vs{
+    clear: both;
+}
+
+#nameTwo{
+    text-align: left;
+    float: right;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+#turn{
+    margin: 20px auto;
+    text-align: center;
+    width: 25%;
+    padding: 5px 0;
+    font-weight: bold;
+    background-color: chartreuse;
+    border: 2px solid darkgreen;
+    border-radius: 5px;
+    clear: both;
+}
+
+.control #left, .control #right{
+    background-color: gray;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.control #left{
+    float: left;
+} 
+
+.control #right{
+    float: right;
+    margin-bottom: 20px;
+}
+
+.leftArrow{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 100px 50px 0;
+    border-color: transparent #007bff transparent transparent; 
+}
+
+.rightArrow{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 0 50px 100px;
+    border-color: transparent transparent transparent #007bff;
+}
+
+#drop{
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px 0;
+    margin: 0 auto;
+    clear: both;
+}
+
+#seen{
+    width: 100px; 
+    height: 100px; 
+    padding: 0.5em; 
+    float: left; 
+    margin: 10px 10px 10px 0;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 426px){
+    .border{
+        width: 75%;
+        margin-top: 10%;
+    }
+
+    .nameVsName{
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    #nameTwo, #nameOne{
+        text-align: center;
+        width: 100%;
+    }
+
+    #turn{
+        width: 50%;
+    }
+
+    .control #left, .control #right{
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .leftArrow{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 35px 70px 35px 0;
+        border-color: transparent #007bff transparent transparent;
+        float: left;
+    }
+    
+    .rightArrow{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 35px 0 35px 70px;
+        border-color: transparent transparent transparent #007bff;
+        float: right;
+    }
+}
