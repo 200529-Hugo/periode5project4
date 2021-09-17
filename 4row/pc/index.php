@@ -67,15 +67,30 @@
                         }
                         
                     }
-                ?>
-                    <!--<div class="hidden"></div><div class="hidden"></div><div class="hidden"></div><div class="hidden"></div><div class="hidden"><div class="seen"></div></div><div class="hidden"></div><div class="hidden"></div>
-                --><div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div>
-                    <div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div>
-                    <div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div>
-                    <div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div>
-                    <div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div>
-                    <div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div>
-                    <div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div>
+                    
+                    $liqry5 = $con->prepare("SELECT `color` FROM `player` WHERE id = 1 LIMIT 1");
+                    $liqry5->bind_result($colorOne);
+                    $liqry5->execute();
+                    $liqry5->store_result();
+
+                    $liqry6 = $con->prepare("SELECT `color` FROM `player` WHERE id = 2 LIMIT 1");
+                    $liqry6->bind_result($colorTwo);
+                    $liqry6->execute();
+                    $liqry6->store_result();
+
+                    for ($i = 0 ; $i < '49'; $i++){
+                        if($i == 48 || $i == 46 || $i == 45){
+                            $liqry5->fetch();
+                            echo '<div style="background-color:' . $colorOne . ';" class="filled"></div>';
+                        } elseif($i == 47 || $i == 43 || $i == 44){
+                            $liqry6->fetch();
+                            echo '<div style="background-color:' . $colorTwo . ';" class="filled"></div>';
+                        }else{
+                            echo '<div class="hole"></div>'; 
+                        }
+                        
+                    }
+                ?> 
                 </div>
             </div>
         </div>

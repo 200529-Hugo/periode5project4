@@ -15,7 +15,13 @@
 </head>
 
 <style>
-    #droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+    #droppable { width: 100px; 
+        height: 100px; 
+        padding: 0.5em; 
+        float: left; 
+        margin: 10px; 
+        text-align: center;
+    }
 
     .ui-widget-content {
         border: 2px solid black;
@@ -109,7 +115,9 @@
                 </div>
             </div>
         </div>
-        <div id="seen" class="ui-widget-content"></div>
+        <div id="seen" class="ui-widget-content">
+            DRAG
+        </div>
         <div id="droppable" class="ui-widget-header">
             <p>SELF DESTRUCT</p>
         </div>

@@ -82,9 +82,8 @@
         if($liqry2 === false) {
            echo mysqli_error($con);
         } else{
-            $liqry2->bind_param('ss',$move,$uid);
+            $liqry2->bind_param('ss',$dbMove,$uid);
             if($liqry2->execute()){
-                echo $move;
                 header( "refresh:1;url=index.php?uid=" . $uid);
                 turn();
             }

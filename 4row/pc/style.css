@@ -70,6 +70,13 @@ body{
     margin: 0 auto;
 }
 
+.filled{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
 .hole{
     background-color: darkblue;
     width: 60px;
